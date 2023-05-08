@@ -1,0 +1,126 @@
+main{
+    width: 100vw;
+    height: 72%;
+}
+
+.imagenCarrusel {
+    height: 50vh;
+    align-items: center;
+    background-image: url(../Imagenes/fondoOpcional.png);
+    background-size: 100vw 100%;
+    display: flex;
+    justify-content: center;
+    border-color: black;
+}
+
+.marquee {
+    display: flex;
+    -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 25%, black 75%, rgba(0, 0, 0, 0) 100%);
+    width: 100vw;
+    user-select: none;
+    overflow: hidden;
+}
+
+.slide {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-evenly;
+    min-width: 100%;
+    animation: 100s linear 0s infinite normal none running slide-x;
+}
+
+.slide img{
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+}
+
+@keyframes slide-x {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.navbar-brand img{
+    width: 100px;
+}
+
+.contenedorModelos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.modelo{
+    margin: 0px 20px;
+}
+
+.contenedorCarros{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.itemTarjeta img{
+    width: 200px;
+}
+
+.zoomable {
+    transition: transform .6s;
+    display: absolute;
+}
+
+.zoomable:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(6px 6px 8px rgb(0, 0, 0));
+}
+
+.itemTarjeta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 60px 0px 60px;
+}
+
+.itemTarjeta button{
+    margin: 10px 0px;
+    padding: 5px 10px;
+}
+
+.itemTarjeta:hover{
+    border: solid transparent;
+}
+
+.itemTarjeta a{
+    font-size: 12px;
+    text-decoration-line: none;
+    color: black;
+}
+
+.atCliente{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+}
+
+.informacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 160px;
+    background-color: brown;
+    margin: 0px 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
