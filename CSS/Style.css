@@ -8,11 +8,6 @@ body{
     background-attachment: fixed;
 }
 
-header{
-    width: 100vw;
-    height: 13vh;
-}
-
 .navbar{
     display: flex;
     flex-direction: row;
@@ -88,7 +83,7 @@ footer{
     height: 15vh;
     background-color: transparent;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-end;
 }
 
@@ -103,4 +98,57 @@ footer ul{
     list-style-type: none;
     margin: 10px 25px;
     font-size: 30px;
+}
+
+.iconos a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-decoration-line: none;
+    color: black;
+}
+
+.instagram,
+.facebook,
+.twitter,
+.youtube {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-end;
+    margin: 10px 10px;
+    font-size: 45px;
+    padding: 9px 11px 8px 11px;
+    outline: solid transparent 2px;
+    border-radius: 30px;
+}
+
+.iconos .instagram:hover {
+    font-size: 40px;
+    color: white;
+    background: linear-gradient(#ffd500e7, #ff7b00e1, #ff006ae1, #d300c5e0, #7538fad8);
+}
+
+.iconos .facebook:hover {
+    font-size: 40px;
+    color: white;
+    background-color: #2e5bbb;
+}
+
+.iconos .twitter:hover {
+    font-size: 40px;
+    color: white;
+    background-color: dodgerblue;
+}
+
+.iconos .youtube:hover {
+    font-size: 40px;
+    color: white;
+    background-color: red;
+}
+
+.copyR{
+    font-size: 10px;
+    color: black;
+    margin-right: 10px;
 }
