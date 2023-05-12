@@ -30,7 +30,7 @@ body{
 }
 
 .offcanvas-body{
-    background: linear-gradient(gray, rgb(0, 0, 0));
+    background: linear-gradient(gray, rgb(53, 53, 53),rgb(99, 98, 98));
 }
 
 .offcanvas-title{
