@@ -13,10 +13,11 @@
     <link rel="shortcut icon" href="./Imagenes/faviconLD1.png" type="image/x-icon">
     <link rel="stylesheet" href="./CSS/Style.css">
     <link rel="stylesheet" href="./CSS/Inicio.css">
+    <link rel="stylesheet" href="./CSS/Detalles.css">
     <title>Luxe Drive</title>
 </head>
 
-<body>
+<body id="body">
     <header>
         <nav class="navbar bg-body-tertiary fixed-top">
             <div class="container-fluid">
@@ -34,42 +35,21 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Nuestros Planes</a>
+                                <a class="nav-link" href="#" id="inicio">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Concesionarios</a>
+                                <a class="nav-link" href="#" id="planes">Nuestros Planes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Servicios</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Modelos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelo</a></li>
-                                </ul>
+                                <a class="nav-link" href="#" id="sucursal">Concesionarios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contactanos</a>
+                                <a class="nav-link" href="#" id="servicios">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="contactanos">Contactanos</a>
                             </li>
                         </ul>
-                        <!-- <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form> -->
                     </div>
                 </div>
             </div>
@@ -79,61 +59,29 @@
         <section class="whatsapp">
             <a href=""><img src="./Imagenes/whatsapap.png" alt=""></a>
         </section>
-        <section class="imagenCarrusel" id="carrusel">
-            <div class="marquee">
-                <div class="slide">
-                    <img src="./Imagenes/autoUno.png" alt="">
-                    <img src="./Imagenes/autoDos.png" alt="">
-                    <img src="./Imagenes/autoTres.png" alt="">
-                </div>
-                <div class="slide">
-                    <img src="./Imagenes/autoSiete.png" alt="">
-                    <img src="./Imagenes/autoNueve.png" alt="">
-                    <img src="./Imagenes/autoDiez.png" alt="">
-                </div>
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="./Imagenes/autoUno.png" alt="Imagen 1" class="carousel-item active">
+                <img src="./Imagenes/autoDos.png" alt="Imagen 2" class="carousel-item">
+                <img src="./Imagenes/autoTres.png" alt="Imagen 3" class="carousel-item">
+                <img src="./Imagenes/autoCuatro.png" alt="Imagen 4" class="carousel-item">
+                <img src="./Imagenes/autoCinco.png" alt="Imagen 5" class="carousel-item">
+                <img src="./Imagenes/autoDiez.png" alt="Imagen 6" class="carousel-item">
             </div>
-        </section>
-        <section>
-            <div class="contenedorCarros">
-                <div class="itemTarjeta">
-                    <img src="./Imagenes/autoCinco.png" class="zoomable" alt="">
-                    <p>TITULO</p>
-                    <button>Ver Modelo</button>
-                    <a href="">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-                <div class="itemTarjeta">
-                    <img src="./Imagenes/autoDos.png" class="zoomable" alt="">
-                    <p>TITULO</p>
-                    <button>Ver Modelo</button>
-                    <a href="">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-                <div class="itemTarjeta">
-                    <img src="./Imagenes/autoDiez.png" class="zoomable" alt="">
-                    <p>TITULO</p>
-                    <button>Ver Modelo</button>
-                    <a href="">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+            <div class="carousel-controls">
+                <button class="prev-button"><i class="fa-solid fa-angle-left"></i></button>
+                <button class="next-button"><i class="fa-solid fa-angle-right"></i></button>
             </div>
-            <div class="contenedorCarros">
-                <div class="itemTarjeta">
-                    <img src="./Imagenes/autoTres.png" class="zoomable" alt="">
-                    <p>TITULO</p>
-                    <button>Ver Modelo</button>
-                    <a href="">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-                <div class="itemTarjeta">
-                    <img src="./Imagenes/autoCuatro.png" class="zoomable" alt="">
-                    <p>TITULO</p>
-                    <button>Ver Modelo</button>
-                    <a href="">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-                <div class="itemTarjeta">
-                    <img src="./Imagenes/autoUno.png" class="zoomable" alt="">
-                    <p>TITULO</p>
-                    <button>Ver Modelo</button>
-                    <a href="">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
+        </div>
+        <section id="containerPages">
+            <section id="contenedosPlanes"></section>
+            <section id="contenedorSucursales"></section>
+            <section id="contenedorServicios"></section>
+            <section id="contenedorContactanos"></section>
+            <section id="contenedorDetalles">
+                <div class="ditailsContainer" id="containerDetalles"></div>
+            </section>
+            <section class="contenedorCarros" id="contenedorCards"></section>
         </section>
         <section>
             <div class="atCliente">
@@ -142,50 +90,43 @@
                         <img src="./Imagenes/consecionario.png" class="imagenInfo" alt="">
                         <p class="tituloInfo">Sucursales</p>
                     </div>
-                    <p class="textoInfo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed rem fugiat
-                        aspernatur nesciunt
-                        assumenda perferendis, fugit id. Reprehenderit cumque numquam officia in vel a! Facilis
-                        recusandae est culpa ut voluptatibus!</p>
+                    <p class="textoInfo">Estamos ubicados en diversos puntos estratégicos de la ciudad, lo que nos
+                        permite brindarte la comodidad de visitarnos en cualquier momento. Además, de contar con sucursales 
+                        en selectas provincias, acercándonos aún más a nuestros clientes. Nuestro objetivo es brindarte la mejor experiencia de compra de autos, estés
+                        donde estés.</p>
                 </div>
                 <div class="informacion">
                     <div class="contenedor">
                         <img src="./Imagenes/planes.png" class="imagenInfo" alt="">
                         <p class="tituloInfo">Planes a tu medida</p>
                     </div>
-                    <p class="textoInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex itaque? Fuga
-                        ullam maxime
-                        unde, itaque vitae inventore quasi tempora repellendus aspernatur iste corporis error odio
-                        quibusdam eaque consectetur ut?</p>
+                    <p class="textoInfo">Comprendemos que cada cliente es único y tiene
+                        necesidades y presupuestos distintos. Por eso, ofrecemos planes de compra personalizados y
+                        flexibles que se adaptan a tus requerimientos, nuestro equipo de expertos está dispuesto a
+                        guiarte y encontrar el plan perfecto para ti. Queremos que obtengas el automóvil de tus sueños
+                        de la manera más conveniente y accesible.</p>
                 </div>
                 <div class="informacion">
                     <div class="contenedor">
                         <img src="./Imagenes/servicios.png" class="imagenInfo" alt="">
                         <p class="tituloInfo">Servicios</p>
                     </div>
-                    <p class="textoInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum deserunt
-                        quaerat explicabo
-                        pariatur odit culpa soluta eligendi voluptate accusamus, ipsum repudiandae nisi ratione
-                        consequuntur in et, vitae vero! Labore, amet!</p>
+                    <p class="textoInfo">Nos comprometemos a brindarte una experiencia integral y satisfactoria incluso
+                        después de la compra. Nuestros servicios van más allá de la adquisición de un vehículo. Te
+                        ofrecemos un completo y variado catálogo de servicios adicionales para asegurarnos de que
+                        disfrutes al máximo de tu auto. Tu satisfacción y tranquilidad son nuestra máxima prioridad.
+                    </p>
                 </div>
             </div>
         </section>
-        <section></section>
     </main>
     <footer>
         <ul class="iconos">
-            <a href="#">
-                <li class="instagram"><i class="fa-brands fa-instagram"></i></li>
-            </a>
-            <a href="#">
-                <li class="facebook"><i class="fa-brands fa-facebook"></i></li>
-            </a>
-            <a href="#">
-                <li class="twitter"><i class="fa-brands fa-twitter"></i></li>
-            </a>
-            <a href="#">
-                <li class="youtube"><i class="fa-brands fa-youtube"></i>
-                <li>
-            </a>
+            <li class="instagram"><i class="fa-brands fa-instagram"></i></li>
+            <li class="facebook"><i class="fa-brands fa-facebook"></i></li>
+            <li class="twitter"><i class="fa-brands fa-twitter"></i></li>
+            <li class="youtube"><i class="fa-brands fa-youtube"></i>
+            <li>
         </ul>
         <p class="copyR">Copyright&copy; 2023- Todos los derechos reservados</p>
     </footer>
@@ -193,6 +134,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+    <script src="./JS/index.js"></script>
 </body>
 
 </html>

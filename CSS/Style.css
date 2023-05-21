@@ -13,16 +13,17 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    position: absolute;
 }
 
 .bg-body-tertiary{
-    height: 13vh;
+    height: 10vh;
     background-color: transparent !important;
 }
 
 .navbar-toggler{
     background-color: transparent;
-    border: 2px solid black;
+    border: 4px solid black;
 }
 
 .offcanvas-header{
@@ -100,18 +101,7 @@ footer ul{
     font-size: 30px;
 }
 
-.iconos a {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    text-decoration-line: none;
-    color: black;
-}
-
-.instagram,
-.facebook,
-.twitter,
-.youtube {
+.iconos i {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -121,27 +111,28 @@ footer ul{
     padding: 9px 11px 8px 11px;
     outline: solid transparent 2px;
     border-radius: 30px;
+    color: black;
 }
 
-.iconos .instagram:hover {
+.instagram i:hover {
     font-size: 40px;
     color: white;
     background: linear-gradient(#ffd500e7, #ff7b00e1, #ff006ae1, #d300c5e0, #7538fad8);
 }
 
-.iconos .facebook:hover {
+.facebook i:hover {
     font-size: 40px;
     color: white;
     background-color: #2e5bbb;
 }
 
-.iconos .twitter:hover {
+.twitter i:hover {
     font-size: 40px;
     color: white;
     background-color: dodgerblue;
 }
 
-.iconos .youtube:hover {
+.youtube i:hover {
     font-size: 40px;
     color: white;
     background-color: red;
@@ -151,4 +142,50 @@ footer ul{
     font-size: 10px;
     color: black;
     margin-right: 10px;
+}
+
+@media screen and (max-width: 690px){
+    .navbar-toggler {
+        font-size: 13px;
+        border: 2px solid black;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .iconos{
+        margin: 0px;
+    }
+
+    .iconos i{
+        padding: 5px;
+        border-radius: 30px;
+        font-size: 20px;
+    }
+
+    .copyR{
+        margin-left: 50px;
+    }
+
+    .instagram i:hover {
+        font-size: 25px;
+    }
+    
+    .facebook i:hover {
+        font-size: 25px;
+    }
+    
+    .twitter i:hover {
+        font-size: 25px;
+    }
+    .youtube i:hover {
+        font-size: 25px;
+    }
+
+    .whatsapp img {
+        width: 40px;
+    }
 }

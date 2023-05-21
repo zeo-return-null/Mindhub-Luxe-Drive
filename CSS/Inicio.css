@@ -1,49 +1,67 @@
-main {
+#containerPages {
     width: 100vw;
     height: 72%;
+    min-height: 72vh;
 }
 
-.imagenCarrusel {
+.carousel {
+    position: relative;
+    width: 100%;
     height: 50vh;
     align-items: center;
     background-image: url(../Imagenes/fondoOpcional.png);
-    background-size: 100vw 100%;
+    background-size: 130vw 100%;
     display: flex;
-    justify-content: center;
-    border-color: black;
+    justify-content: space-between;
 }
 
-.marquee {
+.carousel-container {
     display: flex;
-    -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 25%, black 75%, rgba(0, 0, 0, 0) 100%);
-    width: 100vw;
-    user-select: none;
-    overflow: hidden;
+    transition: transform 0.5s ease;
 }
 
-.slide {
-    align-items: center;
+.carousel-container img{
+    width: 30%;
+    height: 40%;
+    margin-left: 60px;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-controls {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
-    flex-shrink: 0;
-    justify-content: space-evenly;
-    min-width: 100%;
-    animation: 60s linear 0s infinite normal none running slide-x;
+    justify-content: space-between;
 }
 
-.slide img {
-    width: 500px;
-    height: 400px;
-    margin: 0px 100px;
+.carousel-controls button {
+    padding: 5px 10px;
+    font-size: 18px;
 }
 
-@keyframes slide-x {
-    0% {
-        transform: translateX(0);
-    }
+.prev-button,
+.next-button{
+    background-color: transparent;
+    border: none;
+}
 
-    100% {
-        transform: translateX(-100%);
-    }
+button>i{
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+    /* border: 2px solid black;
+    background-color: beige; */
 }
 
 .navbar-brand img {
@@ -51,6 +69,7 @@ main {
 }
 
 .contenedorCarros {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -69,7 +88,7 @@ main {
 }
 
 .itemTarjeta {
-    width: 220px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -80,11 +99,13 @@ main {
 .itemTarjeta button {
     margin: 10px 0px;
     padding: 5px 10px;
+    background: linear-gradient(gray, rgb(0, 0, 0));
+    color: white;
 }
 
 .itemTarjeta button:hover {
-    background: linear-gradient(gray, rgb(0, 0, 0));
-    color: white;
+    background: transparent;
+    color: black
 }
 
 .itemTarjeta a {
@@ -102,19 +123,19 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 50px 0px;
+    /* flex-wrap: wrap;
+    margin: 50px 0px; */
 }
 
 .atCliente {
     width: 100%;
-    height: fit-content;
-    background: linear-gradient(gray, rgb(0, 0, 0));
     height: 350px;
+    background: linear-gradient(gray, rgb(0, 0, 0));
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-top: 50px;
 }
 
 .informacion {
@@ -122,15 +143,15 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: auto;
+    width: 30%;
+    height: 100%;
     perspective: 1000px;
 }
 
 .contenedor {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 35%;
     text-align: center;
     transition: transform 1s;
     transform-style: preserve-3d;
@@ -149,10 +170,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
+    font-size: 15px;
 }
 
 .tituloInfo {
+    width: 100%;
+    height: 110px;
     font-size: 30px;
     color: black;
     font-weight: bold;
@@ -161,14 +184,65 @@ main {
 }
 
 .informacion img {
-    width: 320px;
-    height: 220px;
+    width: 410px;
+    height: 295px;
 }
 
 .informacion .textoInfo {
     width: 100%;
-    margin-top: 40px;
-    font-size: 16px;
+    font-size: 14px;
     text-align: justify;
     color: white;
+}
+
+@media screen and (max-width: 690px){
+    .navbar-brand img {
+        width: 80px;
+    }
+
+    button>i {
+        font-size: 25px;
+    }
+
+    .carousel {
+        position: relative;
+        height: 25vh;
+        background-size: cover;
+    }
+
+    .itemTarjeta img {
+        width: 160px;
+    }
+
+    .atCliente {
+        width: 100vw;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .informacion {
+        width: 100%;
+        height: 240px;
+        margin: 30px 0px 60px 0px;
+    }
+
+    .informacion .textoInfo {
+        font-size: 14px;
+    }
+
+    .informacion img{
+        width: 390px;
+        height: 230px;
+    }
+}
+
+@media screen and (min-width: 690px) and (max-width: 1024px) {
+    .informacion .textoInfo {
+        width: 65%;
+    }
+    
+    .informacion img {
+        width: 300px;
+        height: 270px;
+    }
 }
