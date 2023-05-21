@@ -93,7 +93,7 @@ button>i{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 60px 0px 60px;
+    margin: 20px;
 }
 
 .itemTarjeta button {
@@ -231,18 +231,28 @@ button>i{
     }
 
     .informacion img{
-        width: 390px;
+        width: 100%;
         height: 230px;
     }
 }
 
 @media screen and (min-width: 690px) and (max-width: 1024px) {
-    .informacion .textoInfo {
-        width: 65%;
+    .informacion {
+        width:60%;
+        height: 340px;
+    }
+    .textoInfo {
+        width: 100%;
+    }
+
+    .atCliente {
+        width: 100vw;
+        height: 100%;
+        flex-direction: column;
     }
     
-    .informacion img {
-        width: 300px;
+    .informacion img{
+        width: 100%;
         height: 270px;
     }
 }
