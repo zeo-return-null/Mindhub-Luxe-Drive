@@ -30,6 +30,7 @@ let planes = document.getElementById("contenedosPlanes")
 let sucursales = document.getElementById("contenedorSucursales")
 let servicios = document.getElementById("contenedorServicios")
 let contactanos = document.getElementById("contenedorContactanos")
+let contenedorInf = document.getElementById("atCliente")
 const carouselContainer = document.querySelector('.carousel-container');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
@@ -71,6 +72,7 @@ function mostrar(id) {
             sucursales.style.display = "none"
             contactanos.style.display = "none"
             tarjetasAutos.style.display = "none"
+            contenedorInf.style.display = "none"
             planes.style.display = "flex"
             planes.innerHTML = `
             <p>PAGINA DE LOS PLANES</p>
@@ -81,6 +83,7 @@ function mostrar(id) {
             servicios.style.display = "none"
             contactanos.style.display = "none"
             tarjetasAutos.style.display = "none"
+            contenedorInf.style.display = "none"
             sucursales.style.display = "flex"
             sucursales.innerHTML = `
             <p>PAGINA DE LAS SUCURSALES</p>
@@ -91,6 +94,7 @@ function mostrar(id) {
             sucursales.style.display = "none"
             contactanos.style.display = "none"
             tarjetasAutos.style.display = "none"
+            contenedorInf.style.display = "none"
             servicios.style.display = "flex"
             servicios.innerHTML = `
             <p>PAGINA DE LOS SERVICIOS</p>
@@ -101,6 +105,7 @@ function mostrar(id) {
             servicios.style.display = "none"
             sucursales.style.display = "none"
             tarjetasAutos.style.display = "none"
+            contenedorInf.style.display = "none"
             contactanos.style.display = "flex"
             contactanos.innerHTML = `
             <p>PAGINA DEL FORMULARIO DE CONTACTO</p>
@@ -111,6 +116,7 @@ function mostrar(id) {
             servicios.style.display = "none"
             sucursales.style.display = "none"
             contactanos.style.display = "none"
+            contenedorInf.style.display = "flex"
             tarjetasAutos.style.display = "flex"
             imprimir(inicio)
     }
