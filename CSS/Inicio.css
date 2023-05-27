@@ -5,31 +5,34 @@
 }
 
 .carousel {
-    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.685), rgba(63, 62, 62, 0.747), rgb(202, 199, 199), rgba(0, 0, 0, 0.863)) ;
     width: 100%;
     height: 50vh;
     align-items: center;
-    background-image: url(../Imagenes/fondoOpcional.png);
-    background-size: 130vw 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.carousel img{
+    width: 500px;
+    height: 300px;
 }
 
 .carousel-container {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
 }
 
 .carousel-container img{
-    width: 30%;
-    height: 40%;
-    margin-left: 60px;
+    width: 350px;
+    height: 348px;
+    margin-left: 100px;
 }
 
 .carousel-item {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .carousel-item.active {
@@ -66,6 +69,39 @@ button>i{
 
 .navbar-brand img {
     width: 100px;
+}
+
+.checkbox{
+    margin: 20px 0px 30px 40px
+}
+
+input[type="checkbox"]{
+    margin-left: 20px;
+}
+
+label{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#containerBusqueda{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search{
+    margin-right: 140px;
+}
+
+input[type="search"]{
+    width: 400px;
+    height: 35px;
+    border-bottom: solid rgb(255, 0, 0) 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.822);
+    color: white;
 }
 
 .contenedorCarros {
@@ -197,17 +233,31 @@ button>i{
 
 @media screen and (max-width: 690px){
     .navbar-brand img {
-        width: 80px;
+        width: 50px;
     }
 
     button>i {
         font-size: 25px;
     }
 
+    .carousel-controls button {
+        padding: 5px 1px;
+    }
+
     .carousel {
         position: relative;
-        height: 25vh;
+        height: 20vh;
         background-size: cover;
+    }
+
+    .carousel img{
+        width: 110px;
+        height: 100px;
+    }
+    .carousel-container img{
+        width: 110px;
+        height: 110px;
+        margin-left: 10px;
     }
 
     .itemTarjeta img {
@@ -237,6 +287,22 @@ button>i{
 }
 
 @media screen and (min-width: 690px) and (max-width: 1024px) {
+    .carousel {
+        position: relative;
+        height: 30vh;
+        background-size: cover;
+    }
+
+    .carousel img{
+        width: 330px;
+        height: 150px;
+    }
+    .carousel-container img{
+        width: 230px;
+        height: 200px;
+        margin-left: 50px;
+    }
+
     .informacion {
         width:60%;
         height: 340px;
@@ -250,7 +316,7 @@ button>i{
         height: 100%;
         flex-direction: column;
     }
-    
+
     .informacion img{
         width: 100%;
         height: 270px;
