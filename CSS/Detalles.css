@@ -1,4 +1,4 @@
-#contenedorDetalles{
+/* #contenedorDetalles{
     width: 100vw;
     height: 100%;
     display: flex;
@@ -39,4 +39,260 @@
 
 .ditailsContainer img{
     width: 40%;
+} */
+
+main{
+    height: 76%;
+    min-height: 75vh;
+}
+
+.imagenDetalles{
+    width: 100%;
+    height: 75vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.685),rgb(63, 38, 38),rgb(109, 30, 30));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.infCompra{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerInf{
+    width: 80%;
+    text-align: right;
+}
+
+.containerInf a{
+    color: white;
+}
+
+.containerInf p{
+    color: black;
+    border-bottom: solid 2px white;
+    border-left: solid 2px rgb(255, 0, 0);
+}
+
+.nombreImg{
+    font-size: 70px;
+}
+
+.imgAuto{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgAuto img{
+    width: 900px;
+    height: 700px;
+}
+
+.detallesMas{
+    margin: 40px 0px;
+    text-align: center;
+    color: black;
+}
+
+.motor{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 140px;
+    margin-top: 140px;
+}
+
+.motor h1{
+    color: black;
+    text-align: left;
+    margin-bottom: 20px;
+    border-left: solid 4px rgb(255, 0, 0);
+}
+
+.potencia{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 140px;
+    margin-top: 140px;
+}
+
+.potencia h1{
+    color: black;
+    text-align: right;
+    margin-bottom: 20px;
+    border-right: solid 4px rgb(255, 0, 0);
+}
+
+.motor p{
+    width: 80%;
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: justify;
+}
+
+.imgMotor,
+.imgPotencia,
+.imgTorque,
+.imgTransmision{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgMotor img{
+    width: 600px;
+    height: 400px;
+}
+
+.imgPotencia img{
+    width: 400px;
+    height: 250px;
+}
+
+.potenciaInf{
+    width: 70%;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: bolder;
+    margin-left: 30px;
+}
+
+.torque,
+.transmision{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 140px;
+    margin-top: 140px;
+}
+
+.torqueInf,
+.transmisionInf{
+    width: 45%;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.torqueInf h1{
+    text-align: left;
+    margin-bottom: 20px;
+    color: black;
+    border-left: solid 4px rgb(255, 0, 0);
+}
+
+.imgTorque img{
+    width: 600px;
+    height: 300px;
+}
+
+.transmisionInf h1{
+    color: black;
+    text-align: right;
+    margin-bottom: 20px;
+    border-right: solid 4px rgb(255, 0, 0);
+}
+
+.imgTransmision img{
+    width: 600px;
+    height: 350px;
+}
+
+.performance{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.performanceInf{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.performanceInf h1{
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    border-right: solid 4px rgb(255, 0, 0);
+}
+
+.performanceInf p{
+    width: 40%;
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: justify;
+}
+
+.muestraCompra{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imgD{
+    width: 40%;
+}
+
+.imgD img{
+    width: 550px;
+    height: 400px;
+}
+
+.detalleCompra{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+}
+
+.precio{
+    color: black;
+    font-size: 40px;
+}
+
+.enlaceC{
+    color: black;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.detalleCompra button{
+    margin: 10px 0px;
+    padding: 5px 10px;
+    background: linear-gradient(gray, rgb(0, 0, 0));
+    color: white;
+}
+
+.detalleCompra button:hover {
+    background: transparent;
+    color: black
 }

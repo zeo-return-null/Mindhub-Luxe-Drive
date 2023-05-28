@@ -15,7 +15,7 @@
 
 .carousel img{
     width: 500px;
-    height: 300px;
+    height: 350px;
 }
 
 .carousel-container {
@@ -111,6 +111,7 @@ input[type="search"]{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .itemTarjeta img {
@@ -124,12 +125,19 @@ input[type="search"]{
 }
 
 .itemTarjeta {
-    width: 300px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 20px;
+}
+
+.itemTarjeta:hover{
+    width: 250px;
+    background-color: rgba(102, 89, 89, 0.253);
+    border-radius: 30px 0px;
+    
 }
 
 .itemTarjeta button {
@@ -260,6 +268,26 @@ input[type="search"]{
         margin-left: 10px;
     }
 
+    #containerBusqueda{
+        flex-direction: column;
+    }
+
+    label{
+        font-size: 16px;
+    }
+
+    .checkbox{
+        margin: 10px 0px;
+    }
+    
+    .search{
+        margin: 10px 0px;
+    }
+
+    input[type="search"]{
+        width: 250px;
+    }
+
     .itemTarjeta img {
         width: 160px;
     }
@@ -301,6 +329,18 @@ input[type="search"]{
         width: 230px;
         height: 200px;
         margin-left: 50px;
+    }
+
+    #containerBusqueda{
+        flex-direction: column;
+    }
+
+    .checkbox{
+        margin: 15px 0px;
+    }
+    
+    .search{
+        margin: 15px 0px;
     }
 
     .informacion {

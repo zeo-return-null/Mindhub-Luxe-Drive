@@ -141,31 +141,31 @@ let body = document.getElementById("body")
 let fadeout = document.getElementById("contenedorDetalles")
 let containerDetalles = document.getElementById("containerDetalles")
 let arrayProducto = []
-function detalle(id) {
-    fadeout.style.display = "flex"
-    fadeout.style.top = window.scrollY + "px"
-    fadeout.style.left = window.scrollX + "px"
-    body.style.overflow = "hidden"
-    arrayProducto = inicio.filter(autos => autos.id === id);
-    for (var i = 0; i < arrayProducto.length; i++) {
-        containerDetalles.innerHTML = ` 
-        <div class="detallesDos">
-        <p>MODELO: ${arrayProducto[i].name}</p>
-        <img src="${arrayProducto[i].image}"alt="${arrayProducto[i].name}">
-        <p>MOTOR: ${arrayProducto[i].motor}</p>
-        <p>POTENCIA: ${arrayProducto[i].potencia}</p>
-        </div>
-        <div class="detallesDos">
-        <p>TORQUE: ${arrayProducto[i].torque}</p>
-        <p>TRANSMISIÓN: ${arrayProducto[i].transmision}</p>
-        <p>PERFORMANCE: ${arrayProducto[i].performance}</p>
-        <p>PRECIO: ${arrayProducto[i].price}USD</p>
-        </div>`
-    }
+// function detalle(id) {
+//     fadeout.style.display = "flex"
+//     fadeout.style.top = window.scrollY + "px"
+//     fadeout.style.left = window.scrollX + "px"
+//     body.style.overflow = "hidden"
+//     arrayProducto = inicio.filter(autos => autos.id === id);
+//     for (var i = 0; i < arrayProducto.length; i++) {
+//         containerDetalles.innerHTML = ` 
+//         <div class="detallesDos">
+//         <p>MODELO: ${arrayProducto[i].name}</p>
+//         <img src="${arrayProducto[i].image}"alt="${arrayProducto[i].name}">
+//         <p>MOTOR: ${arrayProducto[i].motor}</p>
+//         <p>POTENCIA: ${arrayProducto[i].potencia}</p>
+//         </div>
+//         <div class="detallesDos">
+//         <p>TORQUE: ${arrayProducto[i].torque}</p>
+//         <p>TRANSMISIÓN: ${arrayProducto[i].transmision}</p>
+//         <p>PERFORMANCE: ${arrayProducto[i].performance}</p>
+//         <p>PRECIO: ${arrayProducto[i].price}USD</p>
+//         </div>`
+//     }
 
-    fadeout.addEventListener("click", function (event) {
-        fadeout.style.display = "none"
-        body.style.overflow = "scroll"
-    })
+//     fadeout.addEventListener("click", function (event) {
+//         fadeout.style.display = "none"
+//         body.style.overflow = "scroll"
+//     })
 
-}
+// }
