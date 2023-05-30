@@ -20,6 +20,7 @@ async function infoAutos() {
   }
 
   imprimir(autosTotal);
+
 }
 
 infoAutos();
@@ -144,6 +145,8 @@ function mostrar(id) {
       carousel.style.display = "flex";
       contenedorInf.style.display = "flex";
       tarjetasAutos.style.display = "flex";
+      checkboxChequeados = []
+      filtroCategoria(autosTotal)
       imprimir(autosTotal);
   }
 }
@@ -246,3 +249,18 @@ let arrayProducto = []
        }
 
  }
+
+ function filtroCategoria(nuevoArray){
+  let categorias = nuevoArray.map(item => item.categoria)
+  let categoriaSinRepetir = new Set(categorias)
+  let categoriaCheckbox = [...categoriaSinRepetir]
+  let categoriasLuxe = ""
+  categoriaCheckbox.map(categoria =>
+    categoriasLuxe += `
+    <input type="checkbox">
+    <label for="checkbox" value="${categoria}">${categoria}</label>
+    `)
+    document.getElementById("checkbox").innerHTML = categoriasLuxe
+
+  }
+
