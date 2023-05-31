@@ -24,6 +24,7 @@ async function infoAutos() {
 }
 
 infoAutos();
+
 let autosTotal;
 let SUV = [];
 let sport = [];
@@ -40,6 +41,7 @@ let contactanos = document.getElementById("contenedorContactanos");
 let contenedorInf = document.getElementById("atCliente");
 let checkboxChequeados = []
 let arrayFiltro = []
+let search = ""
 let inputSearch = document.getElementById("inputSearch")
 const carouselContainer = document.querySelector('.carousel-container');
 const prevButton = document.querySelector('.prev-button');
@@ -145,6 +147,7 @@ function mostrar(id) {
       carousel.style.display = "flex";
       contenedorInf.style.display = "flex";
       tarjetasAutos.style.display = "flex";
+      inputSearch.value = ""
       arrayFiltro = autosTotal
       checkboxChequeados = []
       filtroCategoria(autosTotal)
@@ -167,7 +170,7 @@ function imprimir(elemento) {
   tarjetasAutos.innerHTML = tarjetas;
 }
 
-function contactoForm(id){
+function contactoForm(id) {
   tarjetasAutos.style.display = "none";
   filtrosBusqueda.style.display = "none";
   carousel.style.display = "none";
@@ -244,7 +247,7 @@ function detalle(id) {
                 <div class="performance">
                     <div class="performanceInf">
                         <h1>PERFORMANCE</h1>
-                        <p>${arrayProducto[0].performance}p>
+                        <p>${arrayProducto[0].performance}</p>
                     </div>
                 </div>
             </section>
@@ -255,7 +258,6 @@ function detalle(id) {
                 <div class="detalleCompra">
                     <p class="precio">$${arrayProducto[0].price} USD</p>
                     <button onclick="contactoForm(${arrayProducto[i].id})" class="cotizarComprar" value="${arrayProducto[i].id}">COTIZÁ Y COMPRA</button>
-                    
                 </div>
             </section>
 `
@@ -263,21 +265,12 @@ function detalle(id) {
 
 }
 
-inputSearch.addEventListener("keyup", function (e) { obtenerDatos(e) })
-function obtenerDatos(e) {
+inputSearch.addEventListener("keyup", function (e){
   let datoDelInput = e.target.value
-  let quitoEspacios = datoDelInput.trim().toLowerCase()
+  search = datoDelInput.trim().toLowerCase()
+  filtrosCombinados()
+})
 
-  let filtro = arrayFiltro.filter(item => item.name.toLowerCase().includes(quitoEspacios))
-  console.log(filtro)
-  if (filtro === 0) {
-    tarjetasAutos.innerHTML = `
-    <p>no hay autos</p>
-    `
-  } else {
-    imprimir(filtro)
-  }
-}
 function filtroCategoria(nuevoArray) {
   let categorias = nuevoArray.map(item => item.categoria)
   let categoriaSinRepetir = new Set(categorias)
@@ -290,26 +283,47 @@ function filtroCategoria(nuevoArray) {
   document.getElementById("checkbox").innerHTML = categoriasLuxe
 
   checkboxListener()
+
 }
 function checkboxListener() {
   let checkbox = document.querySelectorAll('input[type=checkbox]')
   for (i = 0; i < checkbox.length; i++) {
-    checkbox[i].addEventListener("change", function (e) {
+    checkbox[i].addEventListener("change", function () {
       checkboxChequeados = []
       for (i = 0; i < checkbox.length; i++) {
         if (checkbox[i].checked) {
           checkboxChequeados.push(checkbox[i].value)
         }
       }
-
-      let categoriasFiltradas = []
-      checkboxChequeados.map(categoria => {
-        let checkedFiltrado = arrayFiltro.filter(item => item.categoria === categoria)
-        categoriasFiltradas.push(...checkedFiltrado)
-      })
-      imprimir(categoriasFiltradas)
+      filtrosCombinados()
     })
-
   }
 
+}
+
+function filtrosCombinados() {
+  var filtro = []
+  if (search !== "" && checkboxChequeados.length > 0) {
+    checkboxChequeados.map(categoria => filtro.push(...arrayFiltro.filter(item =>
+      item.name.toLowerCase().trim().includes(search) && item.categoria === categoria)
+    ))
+  }
+  else if (search !== "" && checkboxChequeados.length == 0) {
+    filtro = arrayFiltro.filter(item => item.name.toLowerCase().trim().includes(search))
+  }
+  else if (search === "" && checkboxChequeados.length > 0) {
+    checkboxChequeados.map(categoria =>
+      filtro.push(...arrayFiltro.filter(item => item.categoria === categoria))
+    )
+  }
+  else {
+    filtro = arrayFiltro
+  }
+  filtro.length > 0 ?
+    imprimir(filtro) :
+    tarjetasAutos.innerHTML = `
+    <div class="ceroResultado">
+       <img src="./Imagenes/busqueda0.png" alt="sin resultado">
+      </div>
+    `
 }

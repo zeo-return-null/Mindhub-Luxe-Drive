@@ -94,7 +94,7 @@
 }
 
 .potenciaInf p {
-    text-align: right;
+    text-align: justify;
     font-size: 22px;
 }
 
@@ -262,6 +262,7 @@
 
 @media screen and (max-width: 690px) {
     .imagenDetalles {
+        height: 73vh;
         flex-direction: column;
     }
 
@@ -274,8 +275,8 @@
     }
 
     .imgAuto img {
-        width: 280px;
-        height: 210px;
+        width: 340px;
+        height: 280px;
     }
 
     .imgMotor img {
