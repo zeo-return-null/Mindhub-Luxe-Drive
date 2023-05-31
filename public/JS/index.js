@@ -38,6 +38,9 @@ let sucursales = document.getElementById("contenedorSucursales");
 let servicios = document.getElementById("contenedorServicios");
 let contactanos = document.getElementById("contenedorContactanos");
 let contenedorInf = document.getElementById("atCliente");
+let checkboxChequeados = []
+let arrayFiltro = []
+let inputSearch = document.getElementById("inputSearch")
 const carouselContainer = document.querySelector('.carousel-container');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
@@ -131,10 +134,7 @@ function mostrar(id) {
       containerDetalles.style.display = "none"
       fadeout.style.display = "none"
       carousel.style.display = "none";
-      contactanos.style.display = "flex";
-      contactanos.innerHTML = `
-        <p>PAGINA DEL FORMULARIO DE CONTACTO</p>
-        `;
+      contactoForm()
       break;
     default:
       planes.style.display = "none";
@@ -145,6 +145,7 @@ function mostrar(id) {
       carousel.style.display = "flex";
       contenedorInf.style.display = "flex";
       tarjetasAutos.style.display = "flex";
+      arrayFiltro = autosTotal
       checkboxChequeados = []
       filtroCategoria(autosTotal)
       imprimir(autosTotal);
@@ -159,30 +160,42 @@ function imprimir(elemento) {
         <img src="${elemento[i].image}" class="zoomable" alt="">
         <p>${elemento[i].name}</p>
         <button onclick="detalle(${elemento[i].id})" class="detalles botonCard" id="detalles" value="${elemento[i].id}" id="detalles">Ver Detalles</button>
-        <a href="#">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <button onclick="contactoForm(${elemento[i].id})" class="cotizacion enlace" value="${elemento[i].id}">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
       </div>
     `;
   }
   tarjetasAutos.innerHTML = tarjetas;
 }
 
+function contactoForm(id){
+  tarjetasAutos.style.display = "none";
+  filtrosBusqueda.style.display = "none";
+  carousel.style.display = "none";
+  contenedorInf.style.display = "none";
+  fadeout.style.display = "none"
+  contactanos.style.display = "flex";
+  contactanos.innerHTML = `
+  <p>PAGINA DEL FORMULARIO DE CONTACTO</p>
+  `;
+}
+
 let containerDetalles = document.getElementById("containerDetalles")
 let fadeout = document.getElementById("contenedorDetalles")
 let arrayProducto = []
- function detalle(id) {
-     tarjetasAutos.style.display = "none";
-     filtrosBusqueda.style.display = "none";
-     carousel.style.display = "none";
-     contenedorInf.style.display = "none";
-     fadeout.style.display = "flex"
-     arrayProducto = autosTotal.filter(autos => autos.id === id);
-     for (var i = 0; i < arrayProducto.length; i++) {
-         containerDetalles.innerHTML = ` 
+function detalle(id) {
+  tarjetasAutos.style.display = "none";
+  filtrosBusqueda.style.display = "none";
+  carousel.style.display = "none";
+  contenedorInf.style.display = "none";
+  fadeout.style.display = "flex"
+  arrayProducto = autosTotal.filter(autos => autos.id === id);
+  for (var i = 0; i < arrayProducto.length; i++) {
+    containerDetalles.innerHTML = ` 
          <section class="imagenDetalles">
                 <div class="infCompra">
                     <aside class="containerInf">
                         <p class="nombreImg">${arrayProducto[0].name}</p>
-                        <a href="#">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <button onclick="contactoForm(${arrayProducto[i].id})" class="cotizacion" value="${arrayProducto[i].id}">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
                     </aside>
                 </div>
                 <div class="imgAuto">
@@ -193,7 +206,7 @@ let arrayProducto = []
             <section>
                 <div class="motor">
                     <div class="imgMotor">
-                        <img src="../Imagenes/motor.png" alt="motorref">
+                        <img src="./Imagenes/motor.png" alt="motorref">
                     </div>
                     <div class="motorInfo">
                         <h1>MOTOR</h1>
@@ -206,12 +219,12 @@ let arrayProducto = []
                         <p>${arrayProducto[0].potenciaDescripcion}</p>
                     </div>
                     <div class="imgPotencia">
-                        <img src="../Imagenes/potencia.jpg" alt="potenciaref">
+                        <img src="./Imagenes/potencia.jpg" alt="potenciaref">
                     </div>
                 </div>
                 <div class="torque">
                     <div class="imgTorque">
-                        <img src="../Imagenes/torque.png" alt="motorref">
+                        <img src="./Imagenes/torque.png" alt="motorref">
                     </div>
                     <div class="torqueInf">
                         <h1>TORQUE</h1>
@@ -225,7 +238,7 @@ let arrayProducto = []
                         <p>${arrayProducto[0].transmision}</p>
                     </div>
                     <div class="imgTransmision">
-                        <img src="../Imagenes/transmision.png" alt="potenciaref">
+                        <img src="./Imagenes/transmision.png" alt="potenciaref">
                     </div>
                 </div>
                 <div class="performance">
@@ -241,26 +254,62 @@ let arrayProducto = []
                 </div>
                 <div class="detalleCompra">
                     <p class="precio">$${arrayProducto[0].price} USD</p>
-                    <button>COTIZÁ Y COMPRA</button>
-                    <p class="enlaceC">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                    <button onclick="contactoForm(${arrayProducto[i].id})" class="cotizarComprar" value="${arrayProducto[i].id}">COTIZÁ Y COMPRA</button>
+                    
                 </div>
             </section>
 `
-       }
+  }
 
- }
+}
 
- function filtroCategoria(nuevoArray){
+inputSearch.addEventListener("keyup", function (e) { obtenerDatos(e) })
+function obtenerDatos(e) {
+  let datoDelInput = e.target.value
+  let quitoEspacios = datoDelInput.trim().toLowerCase()
+
+  let filtro = arrayFiltro.filter(item => item.name.toLowerCase().includes(quitoEspacios))
+  console.log(filtro)
+  if (filtro === 0) {
+    tarjetasAutos.innerHTML = `
+    <p>no hay autos</p>
+    `
+  } else {
+    imprimir(filtro)
+  }
+}
+function filtroCategoria(nuevoArray) {
   let categorias = nuevoArray.map(item => item.categoria)
   let categoriaSinRepetir = new Set(categorias)
   let categoriaCheckbox = [...categoriaSinRepetir]
   let categoriasLuxe = ""
   categoriaCheckbox.map(categoria =>
     categoriasLuxe += `
-    <input type="checkbox">
-    <label for="checkbox" value="${categoria}">${categoria}</label>
+    <label><input type="checkbox" value="${categoria}"> ${categoria}</label>
     `)
-    document.getElementById("checkbox").innerHTML = categoriasLuxe
+  document.getElementById("checkbox").innerHTML = categoriasLuxe
+
+  checkboxListener()
+}
+function checkboxListener() {
+  let checkbox = document.querySelectorAll('input[type=checkbox]')
+  for (i = 0; i < checkbox.length; i++) {
+    checkbox[i].addEventListener("change", function (e) {
+      checkboxChequeados = []
+      for (i = 0; i < checkbox.length; i++) {
+        if (checkbox[i].checked) {
+          checkboxChequeados.push(checkbox[i].value)
+        }
+      }
+
+      let categoriasFiltradas = []
+      checkboxChequeados.map(categoria => {
+        let checkedFiltrado = arrayFiltro.filter(item => item.categoria === categoria)
+        categoriasFiltradas.push(...checkedFiltrado)
+      })
+      imprimir(categoriasFiltradas)
+    })
 
   }
 
+}

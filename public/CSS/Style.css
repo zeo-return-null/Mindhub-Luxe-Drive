@@ -150,6 +150,10 @@ footer ul{
 }
 
 @media screen and (max-width: 690px){
+    .offcanvas{
+        max-width: 80%;
+    }
+
     .navbar>.container-fluid{
         display: flex;
         flex-wrap: inherit;

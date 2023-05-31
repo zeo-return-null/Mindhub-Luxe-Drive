@@ -91,7 +91,7 @@ label{
     justify-content: space-between;
 }
 
-/* .search{
+.search{
     margin-right: 140px;
 }
 
@@ -102,7 +102,18 @@ input[type="search"]{
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.822);
     color: white;
-} */
+}
+
+.ceroResultado{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ceroResultado img{
+    width: 400px;
+}
 
 .contenedorCarros {
     width: 100%;
@@ -138,14 +149,14 @@ input[type="search"]{
     border-radius: 30px 0px;
 }
 
-.itemTarjeta button {
+.itemTarjeta .botonCard {
     margin: 10px 0px;
     padding: 5px 10px;
     background: linear-gradient(gray, rgb(0, 0, 0));
     color: white;
 }
 
-.itemTarjeta button:hover {
+.itemTarjeta .botonCard:hover {
     background: transparent;
     color: black
 }
@@ -160,13 +171,23 @@ input[type="search"]{
     text-decoration-line: underline;
 }
 
+.cotizacion{
+    border: none;
+    text-decoration-line: underline;
+    background-color: transparent;
+    font-size: 12px;
+}
+
+.cotizacion i{
+    font-size: 11px;
+    color: black;
+}
+
 .atCliente {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap;
-    margin: 50px 0px; */
 }
 
 .atCliente {
@@ -252,7 +273,7 @@ input[type="search"]{
 
     .carousel {
         position: relative;
-        height: 20vh;
+        height: 18vh;
         background-size: cover;
     }
 
@@ -321,7 +342,7 @@ input[type="search"]{
 
     .carousel img{
         width: 330px;
-        height: 150px;
+        height: 200px;
     }
     .carousel-container img{
         width: 230px;

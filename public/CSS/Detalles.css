@@ -1,18 +1,18 @@
-#containerDetalles{
+#containerDetalles {
     width: 100vw;
 }
 
-.imagenDetalles{
+.imagenDetalles {
     width: 100%;
     height: 75vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.685),rgb(63, 38, 38),rgb(109, 30, 30));
+    background: linear-gradient(rgba(0, 0, 0, 0.685), rgb(63, 38, 38), rgb(109, 30, 30));
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.infCompra{
+.infCompra {
     width: 30%;
     height: 100%;
     display: flex;
@@ -21,26 +21,26 @@
     align-items: center;
 }
 
-.containerInf{
+.containerInf {
     width: 80%;
     text-align: right;
 }
 
-.containerInf a{
+.containerInf a {
     color: white;
 }
 
-.containerInf p{
+.containerInf p {
     color: black;
     border-bottom: solid 2px white;
     border-left: solid 2px rgb(255, 0, 0);
 }
 
-.nombreImg{
+.nombreImg {
     font-size: 70px;
 }
 
-.imgAuto{
+.imgAuto {
     width: 70%;
     height: 100%;
     display: flex;
@@ -48,18 +48,18 @@
     align-items: center;
 }
 
-.imgAuto img{
+.imgAuto img {
     width: 800px;
     height: 600px;
 }
 
-.detallesMas{
+.detallesMas {
     margin: 40px 0px;
     text-align: center;
     color: black;
 }
 
-.motor{
+.motor {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -69,14 +69,14 @@
     margin-top: 140px;
 }
 
-.motor h1{
+.motor h1 {
     color: black;
     text-align: left;
     margin-bottom: 20px;
     border-left: solid 4px rgb(255, 0, 0);
 }
 
-.potencia{
+.potencia {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -86,33 +86,33 @@
     margin-top: 140px;
 }
 
-.potencia h1{
+.potencia h1 {
     color: black;
     text-align: right;
     margin-bottom: 20px;
     border-right: solid 4px rgb(255, 0, 0);
 }
 
-.potenciaInf p{
+.potenciaInf p {
     text-align: right;
     font-size: 22px;
 }
 
-.motor p{
+.motor p {
     width: 80%;
     font-size: 22px;
     font-weight: bolder;
     text-align: justify;
 }
 
-.motorInfo{
+.motorInfo {
     width: 50%;
 }
 
 .imgMotor,
 .imgPotencia,
 .imgTorque,
-.imgTransmision{
+.imgTransmision {
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -120,17 +120,17 @@
     align-items: center;
 }
 
-.imgMotor img{
+.imgMotor img {
     width: 600px;
     height: 400px;
 }
 
-.imgPotencia img{
+.imgPotencia img {
     width: 400px;
     height: 250px;
 }
 
-.potenciaInf{
+.potenciaInf {
     width: 70%;
     text-align: justify;
     font-size: 22px;
@@ -139,7 +139,7 @@
 }
 
 .torque,
-.transmision{
+.transmision {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -150,43 +150,43 @@
 }
 
 .torqueInf,
-.transmisionInf{
+.transmisionInf {
     width: 45%;
     text-align: justify;
     font-size: 22px;
     font-weight: bolder;
 }
 
-.torqueInf h1{
+.torqueInf h1 {
     text-align: left;
     margin-bottom: 20px;
     color: black;
     border-left: solid 4px rgb(255, 0, 0);
 }
 
-.imgTorque img{
+.imgTorque img {
     width: 600px;
     height: 300px;
 }
 
-.transmisionInf h1{
+.transmisionInf h1 {
     color: black;
     text-align: right;
     margin-bottom: 20px;
     border-right: solid 4px rgb(255, 0, 0);
 }
 
-.transmisionInf p{
+.transmisionInf p {
     text-align: right;
     font-size: 22px;
 }
 
-.imgTransmision img{
+.imgTransmision img {
     width: 600px;
     height: 350px;
 }
 
-.performance{
+.performance {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -194,7 +194,7 @@
     align-items: center;
 }
 
-.performanceInf{
+.performanceInf {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -202,21 +202,21 @@
     align-items: center;
 }
 
-.performanceInf h1{
+.performanceInf h1 {
     color: black;
     text-align: center;
     margin-bottom: 20px;
     border-right: solid 4px rgb(255, 0, 0);
 }
 
-.performanceInf p{
+.performanceInf p {
     width: 40%;
     font-size: 22px;
     font-weight: bolder;
     text-align: justify;
 }
 
-.muestraCompra{
+.muestraCompra {
     width: 100%;
     height: 600px;
     display: flex;
@@ -225,16 +225,16 @@
     align-items: center;
 }
 
-.imgD{
+.imgD {
     width: 40%;
 }
 
-.imgD img{
+.imgD img {
     width: 550px;
     height: 400px;
 }
 
-.detalleCompra{
+.detalleCompra {
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -243,228 +243,125 @@
     line-height: 40px;
 }
 
-.precio{
+.precio {
     color: black;
     font-size: 40px;
 }
 
-.enlaceC{
-    color: black;
-    font-size: 12px;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.detalleCompra button{
+.detalleCompra .cotizarComprar {
     margin: 10px 0px;
     padding: 5px 10px;
     background: linear-gradient(gray, rgb(0, 0, 0));
     color: white;
 }
 
-.detalleCompra button:hover {
+.detalleCompra .cotizarComprar:hover {
     background: transparent;
     color: black
 }
 
-@media screen and (max-width: 690px){
+@media screen and (max-width: 690px) {
     .imagenDetalles {
-        width: 100vw;
-        align-items: flex-start;
         flex-direction: column;
     }
 
     .infCompra{
-        width: 70%;
-        height: 50%;
+        width: fit-content;
     }
 
     .nombreImg {
         font-size: 30px;
     }
 
-    .imgAuto {
-        width: 100vw;
-        justify-content: center;
-    }
-
     .imgAuto img {
-        width: 300px;
-        height: 270px;
-    }
-
-    .detallesMas{
-        width: 100vw;
-    }
-
-    .motor {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .imgMotor{
-        width: 100%;
-        justify-content: flex-start;
+        width: 280px;
+        height: 210px;
     }
 
     .imgMotor img {
-        width: 300px;
-        height: 253px;
-        margin-left: 30px;
-    }
-
-    .motorInfo {
-        width: 100%;
-        margin-top: 50px;
-        margin-left: 100px;
+        width: 200px;
+        height: 150px;
     }
 
     .motorInfo p{
-        width: 80vw;
-        font-size: 16px;
-    }
-
-    .potencia{
-        flex-direction: column-reverse;
-        align-items: flex-start;
+        font-size: 15px;
     }
 
     .imgPotencia img {
-        width: 250px;
+        width: 160px;
+        height: 100px;
+        margin-left: 20px;
+    }
+
+    .potenciaInf p{
+        font-size: 15px;
+    }
+
+    .imgTorque img{
+        width: 200px;
         height: 120px;
-        margin-left: 30px;
-    }
-
-    .potenciaInf{
-        margin-top: 50px;
-        margin-left: 30px;
-    }
-
-    .potencia h1 {
-        border-right: none;
-        border-left: solid 4px rgb(255, 0, 0);
-        text-align: left;
-    }
-
-    .potenciaInf p {
-        width: 80vw;
-        text-align: left;
-        font-size: 16px;
-    }
-
-    .torque{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .torqueInf{
-        margin-top: 50px;
-        margin-left: 30px;
     }
 
     .torqueInf p{
-        width: 80vw;
-        font-size: 16px;
-    }
-
-    .imgTorque img {
-        width: 300px;
-        height: 200px;
-        margin-left: 30px;
-    }
-
-    .transmision{
-        flex-direction: column-reverse;
-        align-items: flex-start;
+        font-size: 15px;
     }
 
     .imgTransmision img {
-        width: 300px;
-        height: 220px;
-        margin-left: 30px;
-    }
-
-    .transmision h1 {
-        border-right: none;
-        border-left: solid 4px rgb(255, 0, 0);
-        text-align: left;
+        width: 180px;
+        height: 130px;
     }
 
     .transmisionInf{
-        margin-top: 50px;
-        margin-left: 30px;
+        width: 50%;
     }
 
-    .transmisionInf p {
-        width: 80vw;
-        text-align: left;
-        font-size: 16px;
+    .transmisionInf p{
+        font-size: 15px;
     }
 
     .performanceInf{
-        width: 100vw;
         flex-direction: column;
-        align-items: flex-start;
     }
 
-    .performanceInf h1{
-        border-right: none;
-        border-left: solid 4px rgb(255, 0, 0);
-    }
-
-    .performanceInf p {
-        width: 80vw;
-        font-size: 16px;
-        margin-left: 30px;
-        margin-right: 30px;
+    .performanceInf p{
+        width: 100%;
+        font-size: 15px;
+        margin: 0px 10px;
     }
 
     .muestraCompra{
-        width: 100vw;
         flex-direction: column;
         justify-content: center;
     }
 
     .imgD{
-        width: 80vw;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
-    .imgD img {
-        width: 340px;
-        height: 300px;
+    .imgD img{
+        width: 280px;
+        height: 230px;
     }
 
-    .precio {
-        color: black;
-        font-size: 25px;
+    .detalleCompra{
+        width: 100%;
     }
-
-    .detalleCompra button {
-        font-size: 16px;
-        padding: 5px;
-    }
-
 }
 
 @media screen and (min-width: 690px) and (max-width: 1024px) {
-    .bg-body-tertiary {
-        width: 100%;
-        height: 14vh;
-    }
-
-
-
     .imagenDetalles {
-        width: 105%;
+        width: 100%;
         height: 55vh;
         margin: 0px;
     }
 
-    .nombreImg{
+    .nombreImg {
         font-size: 40px;
     }
 
-    .imgAuto{
+    .imgAuto {
         width: 50%;
     }
 
