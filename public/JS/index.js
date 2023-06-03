@@ -109,17 +109,14 @@ function mostrar(id) {
       sucursales.style.display = "flex";
       sucursales.innerHTML = `
       <p class="titulo">VISITA NUESTRAS SUCURSALES</p>
-  <section class="sucursalesN" id="nombreSucursales">
-  </section>
-
-  <section id="datosSucursal">
-  </section>
-    
-`;
-imprimirNombre(mapasDireccion)
-detalleSu(mapasDireccion)
-
-      break
+      <section class="sucursalesN" id="nombreSucursales">
+      </section>
+      <section id="datosSucursal">
+      </section>
+      `;
+      imprimirNombre(mapasDireccion)
+      detalleSu(mapasDireccion)
+      break;
 
     case "servicios":
       planes.style.display = "none";
@@ -134,7 +131,7 @@ detalleSu(mapasDireccion)
       servicios.style.display = "flex";
       servicios.innerHTML = `
         <p>PAGINA DE LOS SERVICIOS</p>
-        `;
+        `
       break;
 
     case "contactanos":

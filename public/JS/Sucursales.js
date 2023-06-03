@@ -8,9 +8,7 @@ async function infoAutos() {
 
 infoAutos().then(data => {
   mapasDireccion = data;
-
   let nombres = imprimirNombre(mapasDireccion);
-
   mapasDireccion.forEach(mapa => {
     const nombre = mapa.nombre;
 

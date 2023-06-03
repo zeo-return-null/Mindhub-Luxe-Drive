@@ -6,6 +6,7 @@ function detalle(id) {
   filtrosBusqueda.style.display = "none";
   carousel.style.display = "none";
   contenedorInf.style.display = "none";
+  window.scrollTo({top: 0, behavior: "smooth"})
   fadeout.style.display = "flex"
   arrayProducto = autosTotal.filter(autos => autos.id === id);
   for (var i = 0; i < arrayProducto.length; i++) {
@@ -73,7 +74,7 @@ function detalle(id) {
                 </div>
                 <div class="detalleCompra">
                     <p class="precio">$${arrayProducto[0].price} USD</p>
-                    <button onclick="contactoForm(${arrayProducto[i].id})" class="cotizarComprar" value="${arrayProducto[i].id}">COTIZÁ Y COMPRA</button>
+                    <button onclick="paginaPlanes(${arrayProducto[i].id})" class="cotizarComprar" value="${arrayProducto[i].id}">COTIZÁ Y COMPRA</button>
                 </div>
             </section>
 `
