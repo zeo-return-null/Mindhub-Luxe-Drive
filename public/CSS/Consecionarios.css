@@ -1,0 +1,106 @@
+#contenedorSucursales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.titulo{
+    font-size: 30px;
+    width: fit-content;
+    text-align: center;
+    color: black;
+    margin-top: 30px;
+    border-left: solid 4px rgb(255, 0, 0);
+}
+
+.sucursalesN{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 70px 0px;
+}
+
+.sucursalesN a{
+    width: 400px;
+    font-size: 25px;
+    text-decoration-line: none;
+    color: black;
+    cursor: pointer;
+    margin: 10px 0px 0px 15px;
+}
+
+.sucursalesN a:hover{
+    text-decoration-line: underline;
+    color: blue;
+}
+
+#datosSucursal{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.tarjetaInfoS{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(63, 38, 38, 0.514), rgba(109, 30, 30, 0.493));
+    border-radius: 10px;
+}
+
+.tarjetaInfoS h4{
+    font-weight: bolder;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.tarjetaInfoS p{
+    text-align: left;
+    color: black;
+}
+
+.imgSucursales{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgSucursales img{
+    width: 450px;
+}
+
+@media screen and (max-width: 690px){
+    .titulo{
+        font-size: 20px;
+    }
+
+    .sucursalesN a{
+        font-size: 15px;
+    }
+
+    .tarjetaInfoS{
+        padding: 5px 15px;
+    }
+
+    .imgSucursales img{
+        width: 280px;
+    }
+
+    iframe{
+        margin-top: 50px;
+        width: 300px;
+        height: 200px;
+    }
+}

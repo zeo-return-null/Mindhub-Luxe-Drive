@@ -18,7 +18,6 @@ async function infoAutos() {
       sport.push(autosTotal[i])
     }
   }
-
   imprimir(autosTotal);
 
 }
@@ -91,12 +90,13 @@ function mostrar(id) {
       filtrosBusqueda.style.display = "none";
       containerDetalles.style.display = "none"
       fadeout.style.display = "none"
-      carousel.style.display = "none";
+      carousel.style.display = "flex";
       planes.style.display = "flex";
       planes.innerHTML = `
         <p>PAGINA DE LOS PLANES</p>
         `;
       break;
+
     case "sucursal":
       planes.style.display = "none";
       servicios.style.display = "none";
@@ -105,12 +105,22 @@ function mostrar(id) {
       contenedorInf.style.display = "none";
       filtrosBusqueda.style.display = "none";
       containerDetalles.style.display = "none"
-      carousel.style.display = "none";
+      carousel.style.display = "flex";
       sucursales.style.display = "flex";
       sucursales.innerHTML = `
-        <p>PAGINA DE LAS SUCURSALES</p>
-        `;
-      break;
+      <p class="titulo">VISITA NUESTRAS SUCURSALES</p>
+  <section class="sucursalesN" id="nombreSucursales">
+  </section>
+
+  <section id="datosSucursal">
+  </section>
+    
+`;
+imprimirNombre(mapasDireccion)
+detalleSu(mapasDireccion)
+
+      break
+
     case "servicios":
       planes.style.display = "none";
       sucursales.style.display = "none";
@@ -119,13 +129,14 @@ function mostrar(id) {
       contenedorInf.style.display = "none";
       filtrosBusqueda.style.display = "none";
       fadeout.style.display = "none"
-      carousel.style.display = "none";
+      carousel.style.display = "flex";
       containerDetalles.style.display = "none"
       servicios.style.display = "flex";
       servicios.innerHTML = `
         <p>PAGINA DE LOS SERVICIOS</p>
         `;
       break;
+
     case "contactanos":
       planes.style.display = "none";
       servicios.style.display = "none";
@@ -135,9 +146,10 @@ function mostrar(id) {
       filtrosBusqueda.style.display = "none";
       containerDetalles.style.display = "none"
       fadeout.style.display = "none"
-      carousel.style.display = "none";
+      carousel.style.display = "flex";
       contactoForm()
       break;
+
     default:
       planes.style.display = "none";
       servicios.style.display = "none";
@@ -170,102 +182,7 @@ function imprimir(elemento) {
   tarjetasAutos.innerHTML = tarjetas;
 }
 
-function contactoForm(id) {
-  tarjetasAutos.style.display = "none";
-  filtrosBusqueda.style.display = "none";
-  carousel.style.display = "none";
-  contenedorInf.style.display = "none";
-  fadeout.style.display = "none"
-  contactanos.style.display = "flex";
-  contactanos.innerHTML = `
-  <p>PAGINA DEL FORMULARIO DE CONTACTO</p>
-  `;
-}
-
-let containerDetalles = document.getElementById("containerDetalles")
-let fadeout = document.getElementById("contenedorDetalles")
-let arrayProducto = []
-function detalle(id) {
-  tarjetasAutos.style.display = "none";
-  filtrosBusqueda.style.display = "none";
-  carousel.style.display = "none";
-  contenedorInf.style.display = "none";
-  fadeout.style.display = "flex"
-  arrayProducto = autosTotal.filter(autos => autos.id === id);
-  for (var i = 0; i < arrayProducto.length; i++) {
-    containerDetalles.innerHTML = ` 
-         <section class="imagenDetalles">
-                <div class="infCompra">
-                    <aside class="containerInf">
-                        <p class="nombreImg">${arrayProducto[0].name}</p>
-                        <button onclick="contactoForm(${arrayProducto[i].id})" class="cotizacion" value="${arrayProducto[i].id}">Pedí tu cotización <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-                    </aside>
-                </div>
-                <div class="imgAuto">
-                    <img src="${arrayProducto[0].image}" alt="${arrayProducto[0].name}">
-                </div>
-            </section>
-            <h3 class="detallesMas">Más sobre los Detalles <i class="fa-solid fa-angles-down"></i></h3>
-            <section>
-                <div class="motor">
-                    <div class="imgMotor">
-                        <img src="./Imagenes/motor.png" alt="motorref">
-                    </div>
-                    <div class="motorInfo">
-                        <h1>MOTOR</h1>
-                        <p>${arrayProducto[0].motor}</p>
-                    </div>
-                </div>
-                <div class="potencia">
-                    <div class="potenciaInf">
-                        <h1>POTENCIA</h1>
-                        <p>${arrayProducto[0].potenciaDescripcion}</p>
-                    </div>
-                    <div class="imgPotencia">
-                        <img src="./Imagenes/potencia.jpg" alt="potenciaref">
-                    </div>
-                </div>
-                <div class="torque">
-                    <div class="imgTorque">
-                        <img src="./Imagenes/torque.png" alt="motorref">
-                    </div>
-                    <div class="torqueInf">
-                        <h1>TORQUE</h1>
-                        <p>${arrayProducto[0].torqueDescripcion}</p>
-                    </div>
-                </div>
-                </div>
-                <div class="transmision">
-                    <div class="transmisionInf">
-                        <h1>TRANSMISIÓN</h1>
-                        <p>${arrayProducto[0].transmision}</p>
-                    </div>
-                    <div class="imgTransmision">
-                        <img src="./Imagenes/transmision.png" alt="potenciaref">
-                    </div>
-                </div>
-                <div class="performance">
-                    <div class="performanceInf">
-                        <h1>PERFORMANCE</h1>
-                        <p>${arrayProducto[0].performance}</p>
-                    </div>
-                </div>
-            </section>
-            <section class="muestraCompra">
-                <div class="imgD">
-                    <img src="${arrayProducto[0].image}" alt="${arrayProducto[0].name}">
-                </div>
-                <div class="detalleCompra">
-                    <p class="precio">$${arrayProducto[0].price} USD</p>
-                    <button onclick="contactoForm(${arrayProducto[i].id})" class="cotizarComprar" value="${arrayProducto[i].id}">COTIZÁ Y COMPRA</button>
-                </div>
-            </section>
-`
-  }
-
-}
-
-inputSearch.addEventListener("keyup", function (e){
+inputSearch.addEventListener("keyup", function (e) {
   let datoDelInput = e.target.value
   search = datoDelInput.trim().toLowerCase()
   filtrosCombinados()
