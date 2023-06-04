@@ -19,11 +19,11 @@ function contactoForm(id) {
           <form id="form-contacto" action="" class="col-6 d-flex flex-column justify-content-center align-items-center form">
             <div class="mb-4 col-12">
               <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+              <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
             </div>
             <div class="mb-4 col-12">
               <label for="mail" class="form-label">Mail</label>
-              <input type="email" class="form-control" id="mail" placeholder="Ingrese su email">
+              <input type="email" class="form-control" id="mail" placeholder="Ingrese su email" required>
             </div>
             <div class="mb-4 col-12">
               <label for="mensaje" class="form-label">Mensaje</label>
