@@ -1,0 +1,15 @@
+#contenedorServicios {
+  flex-direction: column; }
+  #contenedorServicios .info-card {
+    background-color: rgba(112, 112, 112, 0.4);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    width: 70%;
+    align-self: center; }
+    #contenedorServicios .info-card .title {
+      color: black;
+      font-weight: bold; }
+    #contenedorServicios .info-card .small-description {
+      font-style: italic;
+      font-size: 0.8rem;
+      margin: 0 3rem 1rem 3rem; }
