@@ -47,6 +47,8 @@ const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 const carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
 let currentIndex = 0;
+let form = document.getElementById("form-contacto")
+
 
 function showItem(index) {
   carouselItems.forEach((item, i) => {
@@ -130,9 +132,7 @@ function mostrar(id) {
       carousel.style.display = "flex";
       containerDetalles.style.display = "none"
       servicios.style.display = "flex";
-      servicios.innerHTML = `
-        <p>PAGINA DE LOS SERVICIOS</p>
-        `
+      getServicios();
       break;
 
     case "contactanos":

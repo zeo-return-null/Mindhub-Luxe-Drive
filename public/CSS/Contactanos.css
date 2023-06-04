@@ -1,0 +1,16 @@
+#contenedorContactanos {
+  flex-direction: column; }
+
+.container {
+  display: flex; }
+  .container-vertical {
+    flex-direction: column; }
+  .container-info {
+    justify-content: between; }
+    @media (max-device-width: 991px) {
+      .container-info {
+        flex-direction: column; }
+        .container-info #form-contacto {
+          width: 100%; } }
+    .container-info .itemTarjeta {
+      width: auto; }
