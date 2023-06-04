@@ -112,6 +112,7 @@ function mostrar(id) {
       <section class="sucursalesN" id="nombreSucursales">
       </section>
       <section id="datosSucursal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26286841.516049135!2d-84.8853213479625!3d-36.46135129368378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf5f5fdc667%3A0x3d2f77992af00fa8!2sArgentina!5e0!3m2!1ses!2sar!4v1685836421014!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
       `;
       imprimirNombre(mapasDireccion)
