@@ -110,9 +110,11 @@
     margin-left: 150px;
 }
 
-.price {
+.price,
+h3{
     font-size: 30px;
-    font-weight: normal;
+    font-weight: bolder;
+    color: black;
 }
 
 .botoneraPlanes {
@@ -262,6 +264,11 @@ button i {
         height: auto;
     }
 
+    .nombrePlan{
+        font-size: 15px;
+        width: 140px;
+    }
+
     .planes,
     .calculadora {
         font-size: 20px;
@@ -269,6 +276,25 @@ button i {
 
     .tituloPlanes {
         font-size: 26px;
+    }
+
+    .price,
+    h3{
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .saberMas{
+        font-size: 24px;
+        color: black;
+        margin-top: 25px;
+    }
+
+    .calculator{
+        justify-content: center;
+        align-items: center;
     }
 
     .subtituloPlanes {
