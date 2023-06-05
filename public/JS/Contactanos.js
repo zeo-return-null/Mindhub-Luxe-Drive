@@ -7,6 +7,7 @@ function contactoForm(id) {
 
   tarjetasAutos.style.display = "none";
   filtrosBusqueda.style.display = "none";
+  planes.style.display = "none";
   carousel.style.display = "flex";
   contenedorInf.style.display = "none";
   fadeout.style.display = "none"

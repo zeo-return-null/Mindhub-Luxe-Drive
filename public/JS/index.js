@@ -33,7 +33,6 @@ let inicio = [];
 let filtrosBusqueda = document.getElementById("containerBusqueda")
 let carousel = document.getElementById("carousel")
 let tarjetasAutos = document.getElementById("contenedorCards");
-let planes = document.getElementById("contenedosPlanes");
 let sucursales = document.getElementById("contenedorSucursales");
 let servicios = document.getElementById("contenedorServicios");
 let contactanos = document.getElementById("contenedorContactanos");
@@ -93,10 +92,7 @@ function mostrar(id) {
       containerDetalles.style.display = "none"
       fadeout.style.display = "none"
       carousel.style.display = "flex";
-      planes.style.display = "flex";
-      planes.innerHTML = `
-        <p>PAGINA DE LOS PLANES</p>
-        `;
+      paginaPlanes()
       break;
 
     case "sucursal":
