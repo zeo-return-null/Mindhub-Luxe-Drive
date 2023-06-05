@@ -287,7 +287,7 @@ button i {
     }
 
     .saberMas{
-        font-size: 24px;
+        font-size: 20px;
         color: black;
         margin-top: 25px;
     }
@@ -301,12 +301,26 @@ button i {
         font-size: 20px;
     }
 
+    .resultado p{
+        font-size: 16px;
+        margin: 20px 0px;
+    }
+
     .nuevo0KM {
         padding-left: 0;
+        font-size: 24px;
     }
 
     .calculator img {
         width: 180px;
         margin-left: 0px;
+    }
+
+    .informacionP .cotizacionPlanes{
+        font-size: 18px;
+    }
+
+    button i{
+        font-size: 16px;
     }
 }

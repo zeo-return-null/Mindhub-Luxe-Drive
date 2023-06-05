@@ -258,9 +258,11 @@ input[type="search"] {
         font-size: 23px;
     }
 
-    .carousel-controls button {
-        padding: 5px 1px;
+    .carousel-controls button>i{
+        font-size: 25px;
+        padding: 5px;
     }
+    
 
     .carousel {
         position: relative;
@@ -274,8 +276,8 @@ input[type="search"] {
     }
 
     .carousel-container img {
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
         margin-left: 10px;
         margin-right: 10px;
     }
