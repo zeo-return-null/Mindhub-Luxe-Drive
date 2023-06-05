@@ -32,6 +32,7 @@ let pickup = [];
 let inicio = [];
 let filtrosBusqueda = document.getElementById("containerBusqueda")
 let carousel = document.getElementById("carousel")
+let planes = document.getElementById("contenedosPlanes")
 let tarjetasAutos = document.getElementById("contenedorCards");
 let sucursales = document.getElementById("contenedorSucursales");
 let servicios = document.getElementById("contenedorServicios");
@@ -82,18 +83,6 @@ for (var i = 0; i < menuNavegacion.length; i++) {
 
 function mostrar(id) {
   switch (id) {
-    case "planes":
-      servicios.style.display = "none";
-      sucursales.style.display = "none";
-      contactanos.style.display = "none";
-      tarjetasAutos.style.display = "none";
-      contenedorInf.style.display = "none";
-      filtrosBusqueda.style.display = "none";
-      containerDetalles.style.display = "none"
-      fadeout.style.display = "none"
-      carousel.style.display = "flex";
-      paginaPlanes()
-      break;
 
     case "sucursal":
       planes.style.display = "none";

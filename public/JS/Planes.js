@@ -1,4 +1,3 @@
-let planes = document.getElementById("contenedosPlanes")
 arrayPlanes = []
 function paginaPlanes(id) {
     tarjetasAutos.style.display = "none";

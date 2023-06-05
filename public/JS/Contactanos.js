@@ -1,10 +1,7 @@
 let dataAuto = [];
-// let form = document.getElementById("form-contacto")
 let modal = document.getElementById("modal")
 function contactoForm(id) {
-  // let form = document.getElementById("form-contacto")
   dataAuto = autosTotal.filter(autos => autos.id === id);
-
   tarjetasAutos.style.display = "none";
   filtrosBusqueda.style.display = "none";
   planes.style.display = "none";
