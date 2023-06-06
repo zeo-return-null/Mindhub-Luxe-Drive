@@ -124,7 +124,7 @@ input[type="search"] {
 }
 
 .itemTarjeta img {
-    width: 260px;
+    width: 340px;
     transition: transform .6s;
 }
 
@@ -134,12 +134,18 @@ input[type="search"] {
 }
 
 .itemTarjeta {
-    width: 300px;
+    width: 360px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 65px 70px 65px;
+    margin: 20px 35px 70px 35px;
+}
+
+.itemTarjeta p{
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
 }
 
 .itemTarjeta:hover {
